@@ -1,1 +1,80 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overtime Calculator</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <main class='container'>
+      <h1>Welcome to The Overtime Calculator</h1>
+      <div class="p-2">
+        <div class='row'>
+          <div class='col'>
+            <label>Total over hours</label>
+            <p id='totalOverHours' class='text-primary'>0.00</p>
+          </div>
+
+          <div class='col'>
+            <label>Total over minutes</label>
+            <p id='totalOverMinutes' class='text-primary'>0.00</p>
+          </div>
+
+          <div class='col'>
+            <label>Only Shifts over hours</label>
+            <p id='shiftOverHours' class='text-primary'>0.00</p>
+          </div>
+
+          <div class='col'>
+            <label>Only Shifts over minutes</label>
+            <p id='shiftOverMinutes' class='text-primary'>0.00</p>
+          </div>
+        </div>
+
+        <p>
+        Add your shifts manually, or copy and paste a comma or space separated
+        list of shifts
+        </p>
+
+        <p class='text-danger'>
+        Don't refresh unless you are done calculating
+        </p>
+
+        <div>
+          <label>Shift Length in hours</label>
+          <input id='shiftLength' type="text" name="globalShiftLength" value="12"/>
+        </div>
+
+        <div>
+          <button type="button" class='btn btn-primary' id="addShift">+ Add Shift</button>
+        </div>
+
+        <div class='row'>
+          <label>Shifts comma/space separated</label>
+          <br>
+          <input id="shiftsFreeForm" type="text" step="0.01" name="shiftLength" placeholder="12.35, 12.15, 12.4"/>
+        </div>
+      </div>
+
+      <div id="shiftsList">
+        <div class="p-2">
+          <label>Shift</label>
+          <br>
+          <input id="shift" type="number" step="0.01" name="shiftLength" placeholder="12.35"/>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </main>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
+</html>
